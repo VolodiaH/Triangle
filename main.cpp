@@ -1,5 +1,4 @@
 #include <iostream>
-#include <memory>
 #include "Triangle.h"
 
 std::unique_ptr<Triangle> chooseTriangle(int length)
