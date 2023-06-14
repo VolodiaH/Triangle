@@ -1,6 +1,17 @@
 #include <iostream>
-
+#include <memory>
 #include "Triangle.h"
+
+std::unique_ptr<Triangle> chooseTriangle(int length)
+{
+	std::string answer = "";
+	std::cout << "A right triangle? (y,n) ";
+	std::cin >> answer;
+	if (answer[0] == 'y')
+		return TriangleFactory::instance().makeRight(length);
+	else
+		return TriangleFactory::instance().makeIsosceles(length);
+}
 
 int main() 
 {
@@ -21,8 +32,8 @@ int main()
 		std::cin >> length;
 		if (lowBoundary <= length && length <= highBoundary)
 		{
-			Triangle tr(length);
-			tr.drawTriangle();
+			std::unique_ptr<Triangle>tr = chooseTriangle(length);
+			tr->drawTriangle();
 
 			wrongEnterCount = 0;
 		}
@@ -42,7 +53,7 @@ int main()
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			}
 			else
-				std::cout << "I know.... It is ver hard - but try again";
+				std::cout << "I know.... It is very hard - but try again";
 			
 			continue;
 		}
