@@ -25,7 +25,7 @@ int main()
 
 	while (true)
 	{
-		std::cout << "\nLength of triangle(5-53): ";
+		std::cout << "\nLength of triangle(" << lowBoundary << "-" << highBoundary << "): ";
 
 		int length = 5;
 		std::cin >> length;
