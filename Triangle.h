@@ -31,7 +31,7 @@ public:
 private:
 	TriangleFactory();
 
-	class RightTriangle : public Triangle
+	class RightTriangle: public Triangle
 	{
 	public:
 		RightTriangle(int length);
@@ -42,7 +42,7 @@ private:
 		void drawRightTriangle();
 	};
 
-	class IsoscelesTriangle : public Triangle
+	class IsoscelesTriangle: public Triangle
 	{
 	public:
 		IsoscelesTriangle(int length);
