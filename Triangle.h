@@ -6,7 +6,7 @@ class ITriangle
 {
 public:
 	virtual void drawTriangle() = 0;
-	virtual ~ITriangle();
+	//virtual ~ITriangle();
 };
 
 class Triangle: public ITriangle
