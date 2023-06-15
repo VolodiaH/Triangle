@@ -1,8 +1,6 @@
 ﻿#include "Triangle.h"
 #include <iostream>
 
-//ITriangle::~ITriangle() {}
-
 Triangle::Triangle(int length):
 	m_length(length) {}
 
